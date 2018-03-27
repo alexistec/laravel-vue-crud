@@ -1,18 +1,17 @@
 new Vue({
-    el : '#main',
-    created:function(){
-            this.getUsers()
+    el : '#crud',
+    created: function(){
+        this.getKeeps();
     },
-    data:{
-            lists : []
+    data: {
+        keeps: []
     },
     methods:{
-        getUsers : function(){
-            var urlUsers = 'https://jsonplaceholder.typicode.com/users';
-            axios.get(urlUsers).then(response=>{
-                this.lists = response.data;
+        getKeeps : function(){
+            var urlKeeps = 'tasks';
+            axios.get(urlKeeps).then(response=>{
+                this.keeps = response.data;
             })
-
         }
     }
 })

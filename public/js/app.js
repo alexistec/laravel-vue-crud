@@ -12030,20 +12030,20 @@ module.exports = function(module) {
 /***/ (function(module, exports) {
 
 new Vue({
-    el: '#main',
+    el: '#crud',
     created: function created() {
-        this.getUsers();
+        this.getKeeps();
     },
     data: {
-        lists: []
+        keeps: []
     },
     methods: {
-        getUsers: function getUsers() {
+        getKeeps: function getKeeps() {
             var _this = this;
 
-            var urlUsers = 'https://jsonplaceholder.typicode.com/users';
-            axios.get(urlUsers).then(function (response) {
-                _this.lists = response.data;
+            var urlKeeps = 'tasks';
+            axios.get(urlKeeps).then(function (response) {
+                _this.keeps = response.data;
             });
         }
     }

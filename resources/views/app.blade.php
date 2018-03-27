@@ -10,21 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="main" class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h1>Vuejs Ajax</h1>
-                    <ul class="list-group">
-                        <li v-for="item in lists" class="list-group-item">@{{item.name}} </li>
-                    </ul>
-                </div>
-                <div class="col-sm-8">
-                    <h1>List json</h1>
-                    <pre>
-                            @{{$data}}
-                    </pre>
-                </div>
-            </div>
+        <div class="container">
+            @yield('content')
         </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.js"></script>
