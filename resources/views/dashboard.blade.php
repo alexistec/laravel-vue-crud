@@ -24,7 +24,7 @@
                         <a href="#" class="btn btn-warning btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="deleteKeeps(keep.id)">Eliminar</a>
                     </td>
                 </tr>
             </tbody>

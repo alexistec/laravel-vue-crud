@@ -12,6 +12,13 @@ new Vue({
             axios.get(urlKeeps).then(response=>{
                 this.keeps = response.data;
             })
+        },
+        deleteKeeps : function(id){
+            var url = 'tasks/'+id;
+            axios.delete(url).then(response=>{
+                alert("Eliminado");
+                this.getKeeps();
+            })
         }
     }
 })

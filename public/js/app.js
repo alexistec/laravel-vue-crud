@@ -12045,6 +12045,15 @@ new Vue({
             axios.get(urlKeeps).then(function (response) {
                 _this.keeps = response.data;
             });
+        },
+        deleteKeeps: function deleteKeeps(id) {
+            var _this2 = this;
+
+            var url = 'tasks/' + id;
+            axios.delete(url).then(function (response) {
+                alert("Eliminado");
+                _this2.getKeeps();
+            });
         }
     }
 });

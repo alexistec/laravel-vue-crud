@@ -74,6 +74,7 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tasks = Task::findOrFail($id);
+        $tasks->delete();
     }
 }
