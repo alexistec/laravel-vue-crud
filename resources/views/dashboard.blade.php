@@ -5,7 +5,7 @@
         <h1 class="page-header">CRUD LARAVEL Y VUEJS</h1>
     </div>
     <div class="col-sm-7">
-        <a href="#" class="btn btn-primary pull-right">NUEVA TAREA</a>
+        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create">NUEVA TAREA</a>
         <table class="table table-hover table-sprite">
             <thead>
                 <tr>
@@ -29,6 +29,7 @@
                 </tr>
             </tbody>
         </table>
+        @include('create')
     </div>
     <div class="col-sm-5">
         <pre>

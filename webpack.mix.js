@@ -12,7 +12,16 @@ let mix = require('laravel-mix');
  */
 
 mix.js([
-    'resources/assets/js/vue.js',
-    'resources/assets/js/axios.js',
+    'resources/assets/js/jquery-3.3.1.js',
+    'resources/assets/js/bootstrap.js',
+    'resources/assets/js/notify.js',
     'resources/assets/js/app.js',
-    ], 'public/js/app.js');
+    ], 'public/js/app.js')
+    .styles([
+        'resources/assets/css/bootstrap.css',
+    ],'public/css/app.css');
+
+
+mix.autoload({
+    jquery: ['$', 'window.jQuery',"jQuery","window.$","jquery","window.jquery"]
+});

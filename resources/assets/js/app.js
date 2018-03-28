@@ -16,8 +16,8 @@ new Vue({
         deleteKeeps : function(id){
             var url = 'tasks/'+id;
             axios.delete(url).then(response=>{
-                alert("Eliminado");
                 this.getKeeps();
+                $.notify("Se elimino correctamente", "success");
             })
         }
     }
